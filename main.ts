@@ -1,5 +1,13 @@
+let numero = 0
+input.onGesture(Gesture.Shake, function () {
+    numero = randint(1, 3)
+})
 basic.forever(function () {
-    basic.showIcon(IconNames.Sad)
-    basic.showIcon(IconNames.Confused)
-    basic.showIcon(IconNames.Happy)
+    if (numero == 1) {
+        basic.showIcon(IconNames.Square)
+    } else if (numero == 2) {
+        basic.showIcon(IconNames.SmallSquare)
+    } else {
+        basic.showIcon(IconNames.Scissors)
+    }
 })
